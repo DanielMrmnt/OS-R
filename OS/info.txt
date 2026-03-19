@@ -1,0 +1,4 @@
+build : cargo +nightly-x86_64-pc-windows-gnu build --target x86_64-blog_os.json
+Créer l'image de l'OS : cargo bootimage
+Afficher l'OS : qemu-system-x86_64 -drive format=raw,file=target/x86_64-blog_os/debug/bootimage-rust_os.bin
+Créer l'image et l'afficher : cargo run
